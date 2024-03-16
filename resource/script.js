@@ -29,13 +29,13 @@ const play = document.getElementById("play"); /* prendo oggetto "play" */
 /* let squares; */
 play.addEventListener("click", function () {
     let squares = [];
-    if (difficulty.value === "difficoltà 1") {
+    if (difficulty.value === "difficoltà1") {
         squares = createSquares(49);
         console.log(squares);
         
-    } else if (difficulty.value === "difficoltà 2") {
+    } else if (difficulty.value === "difficoltà2") {
         squares = createSquares(81);
-        
+        console.log(squares);
     }
     campoMinato.innerHTML = "";
     squares.forEach(square => {
