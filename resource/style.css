@@ -1,0 +1,12 @@
+.square {
+    background-color: rgb(77, 230, 77);
+    width: 30px;
+    height: 30px;
+    border: solid rgb(30, 82, 30) 1px;
+}
+
+#campoMinato {
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+}
