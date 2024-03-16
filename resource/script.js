@@ -2,7 +2,8 @@ function createSquares(number) { /* funzione per creare un numero di quadrati */
     let squares = [];
     for (let i = 0; i < number; i++) {
         let square = document.createElement("div");
-        /* square.innerHTML = `<span><a></a></span>`; */
+        let randomContent = Math.random() < 0.5 ? "Contenuto1" : "Contenuto2";
+        square.innerHTML = `<span> ${randomContent}</span>`;
         square.classList.add("square");
         squares.push(square);
     }
@@ -35,6 +36,9 @@ play.addEventListener("click", function () {
         
     } else if (difficulty.value === "difficoltà2") {
         squares = createSquares(81);
+        console.log(squares);
+    } else if (difficulty.value === "difficoltà3") {
+        squares = createSquares(100);
         console.log(squares);
     }
     campoMinato.innerHTML = "";
