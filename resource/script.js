@@ -1,8 +1,8 @@
-function createSquares(number) { /* funzione per creare un numero di quadrati */
+function createSquares(number, className) { /* funzione per creare un numero di quadrati */
     let squares = [];
     for (let i = 0; i < number; i++) {
         let square = document.createElement("div");
-        let randomContent = Math.random() < 0.5 ? "Contenuto1" : "Contenuto2";
+        let randomContent = Math.random() < 0.5 ? "fiore" : "bomba";
         square.innerHTML = `<span> ${randomContent}</span>`;
         square.classList.add("square");
         squares.push(square);
