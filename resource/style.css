@@ -1,7 +1,5 @@
 .square {
     background-color: rgb(77, 230, 77);
-    width: 80px;
-    height: 80px;
     border: solid rgb(30, 82, 30) 1px;
 }
 
@@ -9,4 +7,19 @@
     margin: 0 auto;
     width: 1000px;
     height: 1000px;
+}
+
+.facile {
+    width: 50px;
+    height: 50px;
+}
+
+.medio {
+    width: 40px;
+    height: 40px;
+}
+
+.difficile {
+    width: 30px;
+    height: 30px;
 }

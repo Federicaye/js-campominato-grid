@@ -5,6 +5,7 @@ function createSquares(number, className) { /* funzione per creare un numero di 
         let randomContent = Math.random() < 0.5 ? "fiore" : "bomba";
         square.innerHTML = `<span> ${randomContent}</span>`;
         square.classList.add("square");
+        square.classList.add(className);
         squares.push(square);
     }
     return squares;
@@ -31,14 +32,14 @@ const play = document.getElementById("play"); /* prendo oggetto "play" */
 play.addEventListener("click", function () {
     let squares = [];
     if (difficulty.value === "difficoltà1") {
-        squares = createSquares(49);
+        squares = createSquares(49, "facile");
         console.log(squares);
         
     } else if (difficulty.value === "difficoltà2") {
-        squares = createSquares(81);
+        squares = createSquares(81, "medio");
         console.log(squares);
     } else if (difficulty.value === "difficoltà3") {
-        squares = createSquares(100);
+        squares = createSquares(100, "difficile");
         console.log(squares);
     }
     campoMinato.innerHTML = "";
