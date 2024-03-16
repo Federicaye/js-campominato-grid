@@ -1,36 +1,46 @@
-function createSquares(number) {
-    const squares = [];
+function createSquares(number) { /* funzione per creare un numero di quadrati */
+    let squares = [];
     for (let i = 0; i < number; i++) {
-        const square = document.createElement("div");
+        let square = document.createElement("div");
         /* square.innerHTML = `<span><a></a></span>`; */
         square.classList.add("square");
         squares.push(square);
     }
     return squares;
-
 };
 
-let campoMinato = document.getElementById("campoMinato");
+console.log(createSquares(10));
+
+let campoMinato = document.getElementById("campoMinato"); /* prendo oggetto "campoMinato" */
 /* const squares = createSquares(10); */
-let squares;
+/* let squares = [];
 squares.forEach(square => {
     campoMinato.appendChild(square);
-});
-console.log(squares);
+}); */
 
-const difficulty = document.getElementById("difficulty");
-const play = document.getElementById("play");
+/* let squares = createSquares(40);
+squares.forEach(square => {
+    campoMinato.appendChild(square); 
+}); */
 
-difficulty.addEventListener("click", function () {
+const difficulty = document.getElementById("difficulty"); /* prendo oggetto "difficulty" */
+const play = document.getElementById("play"); /* prendo oggetto "play" */
+
+/* let squares; */
+play.addEventListener("click", function () {
+    let squares = [];
     if (difficulty.value === "difficoltà 1") {
         squares = createSquares(49);
+        console.log(squares);
+        
     } else if (difficulty.value === "difficoltà 2") {
         squares = createSquares(81);
+        
     }
+    campoMinato.innerHTML = "";
     squares.forEach(square => {
-        campoMinato.appendChild(square);
+        campoMinato.appendChild(square); 
     });
-    console.log(squares);
 });
 
 
